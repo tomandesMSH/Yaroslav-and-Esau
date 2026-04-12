@@ -1,0 +1,60 @@
+const C3 = self.C3;
+self.C3_GetObjectRefTable = function () {
+	return [
+		C3.Plugins.Sprite,
+		C3.Behaviors.solid,
+		C3.Behaviors.Platform,
+		C3.Plugins.Keyboard,
+		C3.Plugins.Text,
+		C3.Plugins.Audio,
+		C3.Plugins.Keyboard.Cnds.OnKey,
+		C3.Plugins.Sprite.Acts.SetMirrored,
+		C3.Behaviors.Platform.Cnds.IsMoving,
+		C3.Behaviors.Platform.Cnds.IsOnFloor,
+		C3.Plugins.System.Cnds.CompareVar,
+		C3.Plugins.Sprite.Acts.SetAnim,
+		C3.Behaviors.Platform.Cnds.IsJumping,
+		C3.Plugins.Sprite.Cnds.IsOverlapping,
+		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.Audio.Acts.Play,
+		C3.Plugins.Sprite.Acts.SetVisible,
+		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.Sprite.Cnds.OnAnimFinished
+	];
+};
+self.C3_JsPropNameTable = [
+	{Solid: 0},
+	{backgroundColorForest: 0},
+	{platformIndustrial_004: 0},
+	{Platform: 0},
+	{character_man: 0},
+	{Keyboard: 0},
+	{Sprite: 0},
+	{game_bg_01_001uhd: 0},
+	{RegularBlock: 0},
+	{SecretCoinRotating: 0},
+	{Text: 0},
+	{Audio: 0},
+	{UserCoinBlue: 0},
+	{Black: 0},
+	{coinsCollected: 0},
+	{bonusBlockShown: 0},
+	{gotBonus: 0}
+];
+
+self.InstanceType = {
+	backgroundColorForest: class extends self.ISpriteInstance {},
+	platformIndustrial_004: class extends self.ISpriteInstance {},
+	character_man: class extends self.ISpriteInstance {},
+	Keyboard: class extends self.IInstance {},
+	Sprite: class extends self.ISpriteInstance {},
+	game_bg_01_001uhd: class extends self.ISpriteInstance {},
+	RegularBlock: class extends self.ISpriteInstance {},
+	SecretCoinRotating: class extends self.ISpriteInstance {},
+	Text: class extends self.ITextInstance {},
+	Audio: class extends self.IInstance {},
+	UserCoinBlue: class extends self.ISpriteInstance {},
+	Black: class extends self.ISpriteInstance {}
+}
