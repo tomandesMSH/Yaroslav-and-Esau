@@ -7,6 +7,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Keyboard,
 		C3.Plugins.Text,
 		C3.Plugins.Audio,
+		C3.Plugins.Mouse,
+		C3.Plugins.Browser,
 		C3.Plugins.Keyboard.Cnds.OnKey,
 		C3.Plugins.Sprite.Acts.SetMirrored,
 		C3.Behaviors.Platform.Cnds.IsMoving,
@@ -21,7 +23,15 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Plugins.System.Acts.SetVar,
-		C3.Plugins.Sprite.Cnds.OnAnimFinished
+		C3.Plugins.Audio.Acts.StopAll,
+		C3.Plugins.Sprite.Cnds.OnAnimFinished,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.Mouse.Cnds.IsOverObject,
+		C3.Plugins.Sprite.Acts.SetScale,
+		C3.Plugins.Mouse.Cnds.OnObjectClicked,
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.Browser.Acts.Close,
+		C3.Plugins.Browser.Acts.GoToURLWindow
 	];
 };
 self.C3_JsPropNameTable = [
@@ -39,6 +49,13 @@ self.C3_JsPropNameTable = [
 	{Audio: 0},
 	{UserCoinBlue: 0},
 	{Black: 0},
+	{logoYaroslavAEsau: 0},
+	{jakobbtnexit: 0},
+	{jacobbtnstart: 0},
+	{jacobbtnmore: 0},
+	{jacobbtnstart2: 0},
+	{Mouse: 0},
+	{Browser: 0},
 	{coinsCollected: 0},
 	{bonusBlockShown: 0},
 	{gotBonus: 0}
@@ -56,5 +73,12 @@ self.InstanceType = {
 	Text: class extends self.ITextInstance {},
 	Audio: class extends self.IInstance {},
 	UserCoinBlue: class extends self.ISpriteInstance {},
-	Black: class extends self.ISpriteInstance {}
+	Black: class extends self.ISpriteInstance {},
+	logoYaroslavAEsau: class extends self.ISpriteInstance {},
+	jakobbtnexit: class extends self.ISpriteInstance {},
+	jacobbtnstart: class extends self.ISpriteInstance {},
+	jacobbtnmore: class extends self.ISpriteInstance {},
+	jacobbtnstart2: class extends self.ISpriteInstance {},
+	Mouse: class extends self.IInstance {},
+	Browser: class extends self.IInstance {}
 }
